@@ -39,6 +39,7 @@ def get_odd_numbers(number):
     for i in range(number):
         if i % 2 == 1:
             num_list.append(i)
+
     return num_list
 
     pass
