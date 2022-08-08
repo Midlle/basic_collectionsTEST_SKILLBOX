@@ -5,9 +5,7 @@ def display_result(participants_names):
     :param participants_names: список имён участников, например: ["Артемий", "Влад", "Дима", "Женя"]
     :type participants_names: List[str]
     """
-    # TODO: в этой функции пишем весь необходимый код
-    #  для вывода результата в нужном формате.
-    #  Логику расчётов тут не программируем
+    print(get_participants_names(participants_names))
     pass
 
 
@@ -21,11 +19,14 @@ def get_participants_names(names):
     :return: список имён с чётными индексами , например: ["Артемий", "Влад", "Дима", "Женя"]
     :rtype: List[str]
     """
-    # TODO: в этой функции получаем элементы списка только с чётными индексами..
-    #  print'ов и input'ов тут не должно быть.
-    #  Функция на вход принимает ранее инициализированные данные
-    #  Функция на выход отдаёт результат необходимый для отображения работы программы,
-    #  который будет передан в функцию display_result.
+
+    participants_name = ["Артемий", "Борис", "Влад", "Гоша", "Дима", "Евгений", "Женя", "Захар"]
+    participants_names = []
+    for i_names in range(0, len(participants_name) - 1, 2):
+        participants_names.append(participants_name[i_names])
+    return participants_names
+
+
     pass
 
 

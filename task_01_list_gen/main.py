@@ -8,6 +8,8 @@ def get_input_parameters():
 
     return int(input('Введите число: '))
 
+    pass
+
 
 def display_result(odd_numbers):
     """
@@ -17,6 +19,8 @@ def display_result(odd_numbers):
     :type odd_numbers: List[int]
     """
     print(get_odd_numbers(number))
+
+    pass
 
 
 def get_odd_numbers(number):
