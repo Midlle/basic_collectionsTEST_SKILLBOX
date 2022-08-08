@@ -6,10 +6,7 @@ def get_input_parameters():
     :rtype: int
     """
 
-    number = int(input('Введите число: '))
-
-
-pass
+    return int(input('Введите число: '))
 
 
 def display_result(odd_numbers):
@@ -19,9 +16,7 @@ def display_result(odd_numbers):
     :param odd_numbers: список нечётных чисел, например: [1, 3, 5, 7, 9, 11, 13]
     :type odd_numbers: List[int]
     """
-
-    print()
-pass
+    print(get_odd_numbers(number))
 
 
 def get_odd_numbers(number):
