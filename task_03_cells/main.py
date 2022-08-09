@@ -5,9 +5,8 @@ def get_input_parameters():
     :return: набор клеток, например: [3, 0, 6, 2, 10]
     :rtype: List[int]
     """
-    # TODO: в этой функции пишем весь необходимый код для
-    #  получения входных параметров.
-    #  Логику расчётов тут не программируем
+    cells_num = int(input('Сколько будет клеток?: '))
+    return cells_num
     pass
 
 
@@ -21,6 +20,7 @@ def display_result(cells):
     # TODO: в этой функции пишем весь необходимый код
     #  для вывода результата в нужном формате.
     #  Логику расчётов тут не программируем
+
     pass
 
 
@@ -40,7 +40,18 @@ def select_cells(cells):
     #  (из функции get_input_parameters).
     #  Функция на выход отдаёт результат необходимый для отображения работы программы,
     #  который будет передан в функцию display_result.
-    pass
+    cells_list = []
+    result = []
+    for i in range(get_input_parameters()):
+        print('Эффективность', (i + 1), ' клетки')
+        effic_cells = int(input(f'Эффективность {i + 1} клетки'))
+        cells_list.append(effic_cells)
+
+    for index in range(get_input_parameters()):
+        if cells_list[index] < index:
+            result.append(cells_list[index])
+    print()
+    return result
 
 
 if __name__ == '__main__':
