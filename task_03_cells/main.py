@@ -5,8 +5,7 @@ def get_input_parameters():
     :return: набор клеток, например: [3, 0, 6, 2, 10]
     :rtype: List[int]
     """
-    cells_num = int(input('Сколько будет клеток?: '))
-    return cells_num
+    return int(input('Сколько будет клеток?: '))
     pass
 
 
@@ -24,7 +23,7 @@ def display_result(cells):
     pass
 
 
-def select_cells(cells):
+def select_cells(result_cells):
     """
     Отбираем список клеток, у которых значение меньше индекса.
 
@@ -43,7 +42,6 @@ def select_cells(cells):
     cells_list = []
     result = []
     for i in range(get_input_parameters()):
-        print('Эффективность', (i + 1), ' клетки')
         effic_cells = int(input(f'Эффективность {i + 1} клетки'))
         cells_list.append(effic_cells)
 
@@ -53,6 +51,9 @@ def select_cells(cells):
     print()
     return result
 
+cells = get_input_parameters()
+result_cells = select_cells(cells)
+screen_result = display_result(result_cells)
 
 if __name__ == '__main__':
     # Это условие необходимо, чтобы в рамках автотестов не произошёл
