@@ -24,17 +24,14 @@ def get_participants_names():
     participants_names = []
     for i_names in range(0, len(participants_name) - 1, 2):
         participants_names.append(participants_name[i_names])
-    print(participants_names)
+    print('число участников: ', participants_names)
     return participants_names
 
 
 names = get_participants_names()
 results_on_screen = display_result(names)
 
-
-
 pass
-
 
 if __name__ == '__main__':
     # Это условие необходимо, чтобы в рамках автотестов не произошёл

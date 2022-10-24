@@ -5,8 +5,16 @@ def get_input_parameters():
     :return: набор клеток, например: [3, 0, 6, 2, 10]
     :rtype: List[int]
     """
-    return int(input('Сколько будет клеток?: '))
-    pass
+    cells_num = int(input('Количество клеток: '))
+
+    cell_list = []
+
+    for i in range(cells_num):
+        print('Эффективность', i + 1, 'клетки: ', end='')
+        cell_i = int(input())
+        cell_list.append(cell_i)
+
+    return cell_list
 
 
 def display_result(cells):
@@ -19,11 +27,10 @@ def display_result(cells):
     # TODO: в этой функции пишем весь необходимый код
     #  для вывода результата в нужном формате.
     #  Логику расчётов тут не программируем
+    print(cells)
 
-    pass
 
-
-def select_cells(result_cells):
+def select_cells(cells):
     """
     Отбираем список клеток, у которых значение меньше индекса.
 
@@ -39,21 +46,19 @@ def select_cells(result_cells):
     #  (из функции get_input_parameters).
     #  Функция на выход отдаёт результат необходимый для отображения работы программы,
     #  который будет передан в функцию display_result.
-    cells_list = []
-    result = []
-    for i in range(get_input_parameters()):
-        effic_cells = int(input(f'Эффективность {i + 1} клетки'))
-        cells_list.append(effic_cells)
 
-    for index in range(get_input_parameters()):
-        if cells_list[index] < index:
-            result.append(cells_list[index])
-    print()
+    result = []
+
+    i = 1
+
+    for cell in cells:
+        if cell < i:
+            result.append(cell)
+
+        i += 1
+
     return result
 
-cells = get_input_parameters()
-result_cells = select_cells(cells)
-screen_result = display_result(result_cells)
 
 if __name__ == '__main__':
     # Это условие необходимо, чтобы в рамках автотестов не произошёл
